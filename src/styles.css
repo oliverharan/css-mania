@@ -1,0 +1,153 @@
+body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  transition: background 0.2s, color 0.2s;
+}
+
+:root {
+  --bg: #fff;
+  --text: #222;
+  --card-bg: #f7f7f7;
+  --card-border: #ddd;
+  --button-bg: #eee;
+  --button-text: #222;
+  --button-hover: #ddd;
+}
+
+body.dark {
+  --bg: #18181b;
+  --text: #f3f3f3;
+  --card-bg: #23232a;
+  --card-border: #333;
+  --button-bg: #333;
+  --button-text: #f3f3f3;
+  --button-hover: #444;
+}
+
+.app-container {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 2rem 1rem 3rem 1rem;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.search-bar {
+  width: 100%;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  border: 1px solid var(--card-border);
+  border-radius: 4px;
+  margin-bottom: 1.5rem;
+  background: var(--card-bg);
+  color: var(--text);
+}
+
+.property-list {
+  columns: 1;
+  column-gap: 1.5rem;
+}
+
+@media (min-width: 600px) {
+  .property-list {
+    columns: 2;
+  }
+}
+
+@media (min-width: 900px) {
+  .property-list {
+    columns: 3;
+  }
+}
+
+.property-card {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 6px;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.property-title {
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.property-value {
+  font-family: monospace;
+  background: var(--button-bg);
+  padding: 0.2rem 0.5rem;
+  border-radius: 3px;
+  display: inline-block;
+}
+
+.copy-btn {
+  align-self: flex-end;
+  background: var(--button-bg);
+  color: var(--button-text);
+  border: none;
+  border-radius: 3px;
+  padding: 0.3rem 0.8rem;
+  cursor: pointer;
+  font-size: 0.95rem;
+  margin-top: 0.3rem;
+  transition: background 0.2s;
+}
+.copy-btn:hover {
+  background: var(--button-hover);
+}
+
+.dark-toggle {
+  background: var(--button-bg);
+  color: var(--button-text);
+  border: none;
+  border-radius: 3px;
+  padding: 0.3rem 0.8rem;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-left: 1rem;
+  transition: background 0.2s;
+}
+.dark-toggle:hover {
+  background: var(--button-hover);
+}
+
+.accordion-group {
+  break-inside: avoid;
+  margin-bottom: 1.2rem;
+  border-radius: 6px;
+  border: 1px solid var(--card-border);
+  background: var(--card-bg);
+  display: block;
+}
+
+.accordion-toggle {
+  width: 100%;
+  text-align: left;
+  background: none;
+  border: none;
+  outline: none;
+  font-size: 1.1rem;
+  font-weight: bold;
+  padding: 0.8rem 1rem;
+  cursor: pointer;
+  color: var(--text);
+  border-radius: 6px 6px 0 0;
+  transition: background 0.2s;
+}
+.accordion-toggle:hover {
+  background: var(--button-hover);
+}
+
+.accordion-content {
+  padding: 0.5rem 1rem 1rem 1rem;
+} 
