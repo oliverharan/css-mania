@@ -19,12 +19,12 @@ const DemoPage: React.FC = () => {
   return (
     <div className="app-container">
       <Link to="/">← Back to list</Link>
-      <h2 style={{ marginTop: '1rem' }}>{item.name}</h2>
-      <div className="property-value" style={{ margin: '1rem 0' }}>{item.value}</div>
-      <div style={{ marginBottom: '1.5rem' }}>{item.description}</div>
-      <div style={{ padding: '1.5rem', background: 'var(--card-bg)', borderRadius: 6, border: '1px solid var(--card-border)' }}>
+      <h2 className="demo-page-title">{item.name}</h2>
+      <div className="property-value demo-page-property-value">{item.value}</div>
+      <div className="demo-page-description">{item.description}</div>
+      <div className="demo-page-container">
         <strong>Demo:</strong>
-        <div style={{ marginTop: '1rem' }}>
+        <div className="demo-page-content">
           {/* Placeholder for demo. You can add custom demos per property here. */}
           <em>Demo coming soon for {item.name}.</em>
         </div>

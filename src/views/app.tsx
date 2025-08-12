@@ -6,8 +6,9 @@ import ReactGA from 'react-ga';
 
 const App: React.FC = () => {
     useEffect(() => {
-        ReactGA.initialize('UA-110182129-1');
-        ReactGA.pageview('Init page view');
+        // TEMPORARILY DISABLED TO TEST FOR BANNER SOURCE
+        // ReactGA.initialize('UA-110182129-1');
+        // ReactGA.pageview('Init page view');
     }, []);
 
     return (

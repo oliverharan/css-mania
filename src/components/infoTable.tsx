@@ -10,12 +10,12 @@ const InfoTable = ({ table } : { table : string[][] }) => {
     const parseText = (text: string): any => {
         if(text.includes("rgb(") || text === "transparent")
         {
-            return <div className="w-6 h-6 border rounded" style={{backgroundColor: text}}></div>
+            return <div className="info-table-color-preview" style={{backgroundColor: text}}></div>
         }
 
         if(text === "current color")
         {
-            return <div className="w-6 h-6 bg-white border rounded"></div>
+            return <div className="info-table-color-preview bg-white"></div>
         }
 
         return text.split('\n').map((subtext,index) => <p key={index}>{subtext}</p>);
